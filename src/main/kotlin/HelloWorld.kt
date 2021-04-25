@@ -25,6 +25,7 @@ fun main (args: Array<String>){
     println(nameArgs)
     println(N)
 
+    //Strings
     val name = "Mauricio"
     val lastname:String = "Avila"
     val fullname:String = "Mauricio\nAvila"
@@ -44,4 +45,24 @@ fun main (args: Array<String>){
     """.trimIndent();
 
     println(paragraph.trimMargin("** "))
+
+    //Ranges
+    println("Ranges")
+    val oneToFive:IntRange = 1..5
+    val oneToA:IntRange = 1..a
+    println("oneToFive")
+    for (i in oneToFive){
+        println(i)
+    }
+    println("oneToA")
+    for (i in oneToA){
+        println(i)
+    }
+
+    println("Range of char")
+    val letterAToC:CharRange = 'A'..'C'
+    for(letter in letterAToC){
+        println(letter)
+    }
+
 }
