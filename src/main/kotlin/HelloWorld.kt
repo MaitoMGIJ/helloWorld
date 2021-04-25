@@ -42,7 +42,7 @@ fun main (args: Array<String>){
         It was popularised in the 1960s with the release of Letraset 
         ** sheets containing Lorem Ipsum passages, and more recently with desktop 
         ** publishing software like Aldus PageMaker including versions of Lorem Ipsum
-    """.trimIndent();
+    """.trimIndent()
 
     println(paragraph.trimMargin("** "))
 
@@ -79,5 +79,36 @@ fun main (args: Array<String>){
         in 1..3 -> println("Yes, the number is between 1 and 3")
         !in 5..10 -> println("No, the number isn't between 5 and 10")
         else -> println("Ops, the number isn't in any before cases")
+    }
+
+    //Loops
+    var i = 1
+    println("While")
+    while (i.compareTo(10) <= 0){
+        println("Message: $i")
+        i++
+    }
+
+    println("Do While")
+    i = 1
+    do{
+        println("Message: $i")
+        i++
+    }while(i.compareTo(10) <= 0)
+
+    println("For")
+    var daysOfWeek = listOf("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+
+    for(day in daysOfWeek){
+        println(day)
+    }
+
+    for((index,day) in daysOfWeek.withIndex()){
+        println("$index :$day")
+    }
+
+    println("ForEach")
+    daysOfWeek.forEach{
+        println(it)
     }
 }
