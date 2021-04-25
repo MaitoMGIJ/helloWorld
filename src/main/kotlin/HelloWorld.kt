@@ -65,4 +65,19 @@ fun main (args: Array<String>){
         println(letter)
     }
 
+    //Control statements
+    val number = 7
+    if(number.equals(2)){
+        println("Yes, the number is equal to 2")
+    }else{
+        println("No, the number isn't equal to 2")
+    }
+
+    //Switch is now When
+    when(number){
+        in 1..5 -> println("Yes, the number is between 1 and 5")
+        in 1..3 -> println("Yes, the number is between 1 and 3")
+        !in 5..10 -> println("No, the number isn't between 5 and 10")
+        else -> println("Ops, the number isn't in any before cases")
+    }
 }
