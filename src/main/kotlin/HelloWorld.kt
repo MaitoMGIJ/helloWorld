@@ -111,4 +111,21 @@ fun main (args: Array<String>){
     daysOfWeek.forEach{
         println(it)
     }
+
+    var compute:String? = null
+
+    var long: Int = compute?.length ?: 0
+
+    println("Null Safety and Elvis Operator")
+    println("String length for $compute is $long")
+
+    val listWithNulls: List<Int?> = listOf<Int?>(7,null,null,4)
+    val listWithoutNulls: List<Int> = listWithNulls.filterNotNull();
+
+    println("List With Nulls")
+    println(listWithNulls)
+    println("List Without Nulls")
+    println(listWithoutNulls)
+    
+
 }
