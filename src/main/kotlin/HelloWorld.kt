@@ -130,7 +130,7 @@ fun main (args: Array<String>){
     println("Array")
     var countries = arrayOf("India", "Mexico", "Colombia", "Argentina", "Chile", "Peru")
     val days = arrayOf<String>("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-    val numbers = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val numbers = intArrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
     countries = countries.reversedArray()
     days.reverse()
@@ -140,6 +140,24 @@ fun main (args: Array<String>){
     println(days.contentToString())
     println("Numbers Sum:")
     println(numbers.sum())
+    println("Numbers Average: ${averageNumbers(numbers)}")
+    println("Evaluate")
+    println("${evaluate()}")
+    println("${evaluate('+')}")
+    println("${evaluate('+', 3)}")
+    println("${evaluate(number = 4, character = '°')}")
 
+}
 
+//Functions
+fun averageNumbers(numbers: IntArray): Double{
+    var sum: Double = 0.0;
+    for(num in numbers){
+        sum+=num
+    }
+    return sum/numbers.size
+}
+
+fun evaluate(character: Char = '=', number: Int = 2): String{
+    return "$number is $character"
 }
