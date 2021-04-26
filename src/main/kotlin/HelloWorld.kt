@@ -126,6 +126,20 @@ fun main (args: Array<String>){
     println(listWithNulls)
     println("List Without Nulls")
     println(listWithoutNulls)
-    
+
+    println("Array")
+    var countries = arrayOf("India", "Mexico", "Colombia", "Argentina", "Chile", "Peru")
+    val days = arrayOf<String>("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    val numbers = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+    countries = countries.reversedArray()
+    days.reverse()
+    println("Countries:")
+    println(countries.contentToString())
+    println("Days:")
+    println(days.contentToString())
+    println("Numbers Sum:")
+    println(numbers.sum())
+
 
 }
