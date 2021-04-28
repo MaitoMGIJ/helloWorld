@@ -1,17 +1,7 @@
+import model.Camera
+import model.Shoe
+
 const val N = "NAME"
-
-//Functions
-fun averageNumbers(numbers: IntArray): Double{
-    var sum = 0.0
-    for(num in numbers){
-        sum+=num
-    }
-    return sum/numbers.size
-}
-
-fun evaluate(character: Char = '=', number: Int = 2): String{
-    return "$number is $character"
-}
 
 fun main (args: Array<String>){
     println("Hello World")
@@ -167,5 +157,35 @@ fun main (args: Array<String>){
     val greeting = {println("Hello Mao")}
     greeting()
 
+    //Class
+    val camera = Camera()
+    println("Resolution: ${camera.getResolution()}")
+    camera.turnOn()
+    println(camera.getCameraStatus())
+    camera.turnOff()
+    println(camera.getCameraStatus())
+
+    camera.setResolution(1080)
+    println("Resolution: ${camera.getResolution()}")
+
+    var shoe = Shoe()
+    shoe.size = 37
+    println(shoe.size)
+
+    shoe.model = "Tennis"
+    println(shoe.model)
+
 }
 
+//Functions
+fun averageNumbers(numbers: IntArray): Double{
+    var sum = 0.0
+    for(num in numbers){
+        sum+=num
+    }
+    return sum/numbers.size
+}
+
+fun evaluate(character: Char = '=', number: Int = 2): String{
+    return "$number is $character"
+}
