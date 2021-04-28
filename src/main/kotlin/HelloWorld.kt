@@ -1,5 +1,18 @@
 const val N = "NAME"
 
+//Functions
+fun averageNumbers(numbers: IntArray): Double{
+    var sum = 0.0
+    for(num in numbers){
+        sum+=num
+    }
+    return sum/numbers.size
+}
+
+fun evaluate(character: Char = '=', number: Int = 2): String{
+    return "$number is $character"
+}
+
 fun main (args: Array<String>){
     println("Hello World")
     println("Datatype primitives")
@@ -67,7 +80,7 @@ fun main (args: Array<String>){
 
     //Control statements
     val number = 7
-    if(number.equals(2)){
+    if(number == 2){
         println("Yes, the number is equal to 2")
     }else{
         println("No, the number isn't equal to 2")
@@ -84,7 +97,7 @@ fun main (args: Array<String>){
     //Loops
     var i = 1
     println("While")
-    while (i.compareTo(10) <= 0){
+    while (i <= 10){
         println("Message: $i")
         i++
     }
@@ -94,7 +107,7 @@ fun main (args: Array<String>){
     do{
         println("Message: $i")
         i++
-    }while(i.compareTo(10) <= 0)
+    }while(i <= 10)
 
     println("For")
     var daysOfWeek = listOf("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
@@ -112,9 +125,9 @@ fun main (args: Array<String>){
         println(it)
     }
 
-    var compute:String? = null
+    val compute:String? = null
 
-    var long: Int = compute?.length ?: 0
+    val long: Int = compute?.length ?: 0
 
     println("Null Safety and Elvis Operator")
     println("String length for $compute is $long")
@@ -142,22 +155,17 @@ fun main (args: Array<String>){
     println(numbers.sum())
     println("Numbers Average: ${averageNumbers(numbers)}")
     println("Evaluate")
-    println("${evaluate()}")
-    println("${evaluate('+')}")
-    println("${evaluate('+', 3)}")
-    println("${evaluate(number = 4, character = '°')}")
+    println(evaluate())
+    println(evaluate('+'))
+    println(evaluate('+', 3))
+    println(evaluate(number = 4, character = '°'))
+
+    println("Lambdas")
+    val w = {d: Int, c: Int -> d+c}
+    println(w(2, 3))
+
+    val greeting = {println("Hello Mao")}
+    greeting()
 
 }
 
-//Functions
-fun averageNumbers(numbers: IntArray): Double{
-    var sum: Double = 0.0;
-    for(num in numbers){
-        sum+=num
-    }
-    return sum/numbers.size
-}
-
-fun evaluate(character: Char = '=', number: Int = 2): String{
-    return "$number is $character"
-}
